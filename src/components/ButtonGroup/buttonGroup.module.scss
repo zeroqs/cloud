@@ -1,0 +1,11 @@
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 64px;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .btn {
+    width: inherit;
+  }
+}

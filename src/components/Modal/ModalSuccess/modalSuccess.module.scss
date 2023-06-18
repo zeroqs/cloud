@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #333333;
+  }
+
+  .imgBack {
+    background: rgba(5, 174, 113, 0.15);
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+    .img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  .button {
+    width: inherit;
+  }
+}

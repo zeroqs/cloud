@@ -1,0 +1,65 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:disabled {
+    background: rgba(0, 0, 0, 0.04);
+    color: rgb(126, 125, 125);
+
+    &:hover {
+      border: 1.5px solid rgba(0, 0, 0, 0.04);
+      color: rgb(126, 125, 125);
+      cursor: not-allowed;
+      background: rgba(0, 0, 0, 0.04);
+
+    }
+  }
+
+}
+
+.fulfilled {
+  background: #5558FA;
+  color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+  border: 1.5px solid #FFFFFF;
+
+  .add {
+    path {
+      fill: #5558FA;
+    }
+  }
+
+  &:hover {
+    border: 1.5px solid #5558FA;
+    color: #5558FA;
+    background: #FFFFFF;
+  }
+}
+
+.outlined {
+  border: 1.5px solid #5558FA;
+  color: #5558FA;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #5558FA;
+    color: #FFFFFF;
+
+    .add {
+      path {
+        fill: #FFFFFF;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .advantages {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+
+
+  .button {
+    width: 44px;
+    height: 44px;
+    padding: 16px;
+  }
+}

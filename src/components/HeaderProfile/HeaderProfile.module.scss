@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+
+  @media (max-width: 372px) {
+    justify-content: center;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .name {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: #333333;
+    }
+
+    .links {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #5558FA;
+          }
+        }
+      }
+    }
+  }
+}
+

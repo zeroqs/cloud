@@ -1,0 +1,47 @@
+.root {
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  outline: none;
+  max-width: 100%;
+  color: rgba(0, 0, 0, 0.48);
+  height: 84px;
+  width: 100%;
+
+
+}
+
+.tip {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+
+
+}
+
+.textarea {
+  position: relative;
+
+}
+
+.count {
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.48);
+}

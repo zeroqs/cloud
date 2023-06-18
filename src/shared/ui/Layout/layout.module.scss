@@ -1,0 +1,27 @@
+.root {
+  background: #FFFFFF;
+  border-radius: 12px 12px 0px 0px;
+  max-width: 900px;
+  margin: 24px auto 0px auto;
+
+}
+
+.profile {
+  height: 700px;
+  padding: 25px 24px;
+
+}
+
+.step {
+  padding: 62px 110px;
+  min-height: 821px;
+  gap: 24px;
+  @media (max-width: 520px) {
+    padding: 55px 44px;
+
+  }
+  @media (max-width: 390px) {
+    padding: 55px 24px;
+
+  }
+}

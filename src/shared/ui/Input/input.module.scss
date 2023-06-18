@@ -1,0 +1,50 @@
+.root {
+  height: 44px;
+  width: 100%;
+  padding: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.48);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  outline: none;
+}
+
+
+.label {
+  color: #333333;
+  padding-bottom: 8px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tip {
+  padding-top: 8px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+.disabled {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.delete {
+  cursor: pointer;
+  padding-left: 16px;
+
+  &:hover {
+
+    path {
+      transition: fill 0.2s ease-in-out;
+      fill: #5558FA;
+    }
+  }
+}

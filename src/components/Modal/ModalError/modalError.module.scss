@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+
+  .headerBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .header {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: #333333;
+    }
+  }
+
+
+  .imgBack {
+    background: rgba(232, 78, 88, 0.15);
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+
+  }
+
+  .imgHeaderBack {
+    position: relative;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 100px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .button {
+    width: inherit;
+    align-self: end;
+  }
+}
