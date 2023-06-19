@@ -14,7 +14,7 @@ import { formApi } from '@/App/services/form';
 
 import { ChangeEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { FieldValues, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 
@@ -43,6 +43,8 @@ const StepThree = () => {
   };
 
   const navigateNext = () => {
+    dispatch(fill({ about: textArea.value }));
+
     setIsModal(true);
   };
 
@@ -57,8 +59,7 @@ const StepThree = () => {
     dispatch(change({ id, value }));
   };
 
-  const onSubmit = async (data: FieldValues) => {
-    dispatch(fill(data));
+  const onSubmit = async () => {
     await fetchData(formState);
   };
   return (

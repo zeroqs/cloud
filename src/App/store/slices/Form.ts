@@ -34,7 +34,7 @@ export const counterSlice = createSlice({
   reducers: {
     fill: (state, action) => {
       const newItems = action.payload;
-
+      console.log(newItems);
       return { ...state, ...newItems };
     },
   },
