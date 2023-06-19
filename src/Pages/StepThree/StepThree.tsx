@@ -14,7 +14,7 @@ import { formApi } from '@/App/services/form';
 
 import { ChangeEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useNavigate } from 'react-router-dom';
 
@@ -57,10 +57,10 @@ const StepThree = () => {
     dispatch(change({ id, value }));
   };
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FieldValues) => {
     dispatch(fill(data));
     await fetchData(formState);
-  }; // TODO Fix any
+  };
   return (
     <Layout size='step'>
       <Bar />

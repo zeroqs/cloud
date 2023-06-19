@@ -12,7 +12,7 @@ import { fill } from '@/App/store/slices/Form';
 import { stepTwoSchema } from '@/shared/utils/StepTwo';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useFieldArray, useForm } from 'react-hook-form';
+import { FieldValues, useFieldArray, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const StepTwo = () => {
@@ -38,7 +38,7 @@ const StepTwo = () => {
       dispatch(setEnd());
     }, 10);
   };
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FieldValues) => {
     const newObj = {
       advantages: [...data.advantages],
       checkbox: [...data.checkbox.map((item: string) => Number(item))],
@@ -46,14 +46,13 @@ const StepTwo = () => {
     };
     dispatch(fill(newObj));
   };
-
   return (
     <Layout size='step'>
       <ProgressBar />
       <form onSubmit={handleSubmit(onSubmit)}>
         <main className={styles.root}>
           <AdvantagesInputs register={register} />
-          <CheckboxGroup register={register} />
+          <CheckboxGroup error={(errors.checkbox?.message || '').toString()} register={register} />
           <RadioGroup register={register} />
         </main>
         <ButtonGroup onBack={navigateBack} isValid={isValid} onNext={navigateNext} />

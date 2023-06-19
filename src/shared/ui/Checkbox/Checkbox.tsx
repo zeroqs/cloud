@@ -10,10 +10,9 @@ interface ICheckbox extends HTMLAttributes<HTMLInputElement> {
   className?: string;
   register?: UseFormRegister<FieldValues>;
   defaultValue?: string;
-  name?: string;
 }
 
-const Checkbox = ({ id, children, className, register, defaultValue, name, ...props }: ICheckbox) => {
+const Checkbox = ({ id, children, className, register, defaultValue, ...props }: ICheckbox) => {
   const [isChecked, setIsChecked] = useState(false);
   const classes = classNames(className, styles.root);
   const handleChange = () => {

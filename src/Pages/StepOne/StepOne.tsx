@@ -13,7 +13,7 @@ import { customStyles, options, stepOneSchema } from '@/shared/utils/StepOne';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ChangeEvent } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, FieldValues, useForm } from 'react-hook-form';
 import Select from 'react-select';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -44,7 +44,7 @@ const StepOne = () => {
     const id = event.target.id;
     dispatch(changeInput({ value, id }));
   };
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FieldValues) => {
     const {
       name,
       nickname,

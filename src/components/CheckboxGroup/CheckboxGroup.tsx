@@ -10,9 +10,10 @@ import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 interface ICheckboxGroup {
   register?: UseFormRegister<FieldValues>;
+  error?: string;
 }
 
-const CheckboxGroup = ({ register }: ICheckboxGroup) => {
+const CheckboxGroup = ({ register, error }: ICheckboxGroup) => {
   const checkboxes = useSelector((state: RootState) => state.checkBoxGroup);
   const dispatch = useDispatch();
 
@@ -37,6 +38,7 @@ const CheckboxGroup = ({ register }: ICheckboxGroup) => {
           {item.value}
         </Checkbox>
       ))}
+      <span className={styles.tip}>{error}</span>
     </div>
   );
 };
